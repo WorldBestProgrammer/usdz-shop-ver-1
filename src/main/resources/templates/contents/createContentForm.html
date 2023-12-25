@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Content Form</title>
+</head>
+<body>
+
+<h1>Create Content</h1>
+
+<form action="/new" method="post" enctype="multipart/form-data" th:object="${contentForm}">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" th:field="*{name}" required><br>
+
+  <label for="thumbnailImage">Thumbnail Image:</label>
+  <input type="file" id="thumbnailImage" name="thumbnailImage" th:field="*{image}" accept="image/*" required><br>
+
+  <label for="usdzFile">USDZ File:</label>
+  <input type="file" id="usdzFile" name="usdzFile" th:field="*{file}" accept=".usdz" required><br>
+
+  <input type="submit" value="Create Content">
+</form>
+
+</body>
+</html>
