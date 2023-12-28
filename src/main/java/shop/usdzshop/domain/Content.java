@@ -27,7 +27,7 @@ public class Content {
     @Column(name = "content_id")
     private Long id;
 
-//    @NotEmpty
+    @NotEmpty
     private String name;
 
     @Lob
@@ -35,7 +35,7 @@ public class Content {
     private String image;
 
     @Lob
-//    @NotEmpty
+    @NotEmpty
     @Column(name = "usdz_file")
     private byte[] file;
 }
